@@ -1,0 +1,572 @@
+.nav-links a.active {
+    border-bottom: 2px solid white;
+    /* Mengatur garis bawah */
+    padding-bottom: 5px;
+    /* Menjaga jarak antara teks dan garis */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+#home {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+body {
+    color: white;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.burger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    position: relative;
+    left: -50px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    /* Ukuran font */
+    font-weight: bolder;
+    /* Ketebalan font */
+    color: white;
+    /* Warna font */
+    margin-right: auto;
+    /* Memastikan nama brand berada di sebelah kiri */
+}
+
+
+
+/* buton produk  */
+.gradient-button {
+    margin: 20px;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #b40000,
+            #353123,
+            #6bffb5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gradient-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* home */
+h2 {
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    font-size: 40px;
+}
+
+.container {
+    text-align: center;
+}
+
+/* card-container */
+
+.descripsi-card {
+    margin: 10px;
+
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    margin: 20px;
+    background-color: rgba(109, 96, 96, 0.247);
+    /* Warna latar belakang dengan transparansi */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    transition: transform 0.3s ease;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* produk secone */
+.fa-pen,
+.fa-file,
+.fa-computer {
+    margin: 15px;
+    font-size: 40px;
+}
+
+.conatiner-poduk {
+    margin: 50px;
+    display: flex;
+    gap: 100px;
+}
+
+.card-border {
+    border: 1px solid #312020;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.card-produk {
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-produk img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.card-produk .content {
+    padding: 5px;
+}
+
+.card-produk .content h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #979797;
+}
+
+.card-produk .content p {
+    font-size: 16px;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.card-produk .content .price {
+    font-size: 20px;
+    color: #28a745;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.card-produk .content button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-produk .content button:hover {
+    background-color: #0056b3;
+}
+
+/* faq  */
+
+.faq {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.accordion {
+    background-color: #000000;
+    color: #9e9e9e;
+    cursor: pointer;
+    padding: 15px;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.accordion:hover {
+    color: wheat;
+    background-color: #0517bd;
+}
+
+.panel {
+    padding: 20px 15px;
+    display: none;
+    /* Awalnya disembunyikan */
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.fa-chevron-down {
+    float: right;
+    transition: transform 0.3s;
+}
+
+.accordion.active .fa-chevron-down {
+    transform: rotate(180deg);
+    /* Memutar ikon ketika aktif */
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #000000;
+    /* Warna latar belakang footer */
+}
+
+footer div {
+    color: white;
+    /* Warna teks */
+}
+
+footer h4 {
+    margin: 0;
+    /* Menghilangkan margin untuk judul */
+}
+
+footer ul {
+    list-style: none;
+    /* Menghilangkan bullet points */
+    padding: 0;
+    /* Menghilangkan padding */
+    display: flex;
+    /* Mengatur item dalam baris */
+    gap: 10px;
+    /* Jarak antar item */
+}
+
+footer a {
+    color: white;
+    /* Warna tautan */
+    text-decoration: none;
+    /* Menghilangkan garis bawah pada tautan */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    /* Menambahkan garis bawah saat hover */
+}
+
+
+
+
+/* ========= responsiv ============= */
+
+
+/* Mobile Styles */
+@media (max-width: 575.98px) {
+
+    /* responsiv */
+
+    section {
+        padding: 100px 20px;
+        min-height: 100vh;
+    }
+
+    body {
+        font-size: 15px;
+        /* Sedikit lebih besar dari ponsel */
+        padding: 20px;
+        /* Ruang tambahan di sekitar konten */
+    }
+
+    .brand-name {
+        position: relative;
+        left: -10px;
+    }
+
+    .card-container {
+        opacity: 0;
+    }
+
+    .btn-home {
+        margin: 10px;
+        display: flex;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    #produk {
+        position: relative;
+        top: -600px;
+    }
+
+    .produk h1 {
+        font-size: 24px;
+        margin: 15px;
+    }
+
+    .conatiner-poduk {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-border {
+        min-width: 108%;
+        margin: 0 auto;
+    }
+
+    .content h3 {
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .container-kiri h1 {
+        display: flex;
+        font-size: 1.5rem;
+    }
+
+    .container-kiri .gradient-button {
+        display: flex;
+    }
+
+    /* responsiv navbar */
+
+    .burger {
+        position: relative;
+        left: 400px;
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        transform: translateY(-200%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+/* Tablet potret (576px - 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    /* Gaya untuk tablet potret */
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-home {
+        position: relative;
+        left: 20px;
+    }
+
+    #produk {
+        position: relative;
+        top: -600px;
+    }
+
+    .produk h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+
+    .card-container {
+        opacity: 0;
+    }
+
+    .produk h1 {
+        font-size: 24px;
+        margin: 15px;
+    }
+
+    .conatiner-poduk {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-border {
+        min-width: 10%;
+        margin: 0 auto;
+    }
+
+    .content h3 {
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .container-kiri .gradient-button {
+        display: flex;
+    }
+
+    .footer p {
+        position: relative;
+        left: 90px;
+    }
+
+
+}
+
+
+/* Tablet lanskap (768px - 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Gaya untuk tablet lanskap */
+    .card-container {
+        opacity: 0;
+    }
+
+    .produk h1 {
+        font-size: 1.5rem;
+    }
+
+    #produk {
+        position: relative;
+        top: -500px;
+    }
+
+    .produk h1 {
+        font-size: 24px;
+        margin: 15px;
+    }
+
+    .conatiner-poduk {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-border {
+        min-width: 10%;
+        margin: 0 auto;
+    }
+
+    .content h3 {
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .footer p {
+        position: relative;
+        left: 90px;
+    }
+
+}
